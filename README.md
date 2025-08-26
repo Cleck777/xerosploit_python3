@@ -40,8 +40,8 @@ pipx installs Xerosploit in an isolated environment and makes it available globa
 
 ### Quick Install
 ```bash
-git clone https://github.com/LionSec/xerosploit
-cd xerosploit
+https://github.com/Cleck777/xerosploit_python3
+cd xerosploit_python3
 chmod +x install_pipx.sh
 ./install_pipx.sh
 ```

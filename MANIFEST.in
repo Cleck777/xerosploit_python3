@@ -5,7 +5,9 @@ include banner.py
 include xerosploit.py
 include run.sh
 include install.py
-recursive-include tools *
+include install_pipx.sh
+include test_installation.py
+include PIPX_USAGE.md
 recursive-include debian *
 global-exclude __pycache__
 global-exclude *.py[co]
