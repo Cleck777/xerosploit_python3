@@ -1,0 +1,12 @@
+include README.md
+include LICENSE
+include requirements.txt
+include banner.py
+include xerosploit.py
+include run.sh
+include install.py
+recursive-include tools *
+recursive-include debian *
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .git*

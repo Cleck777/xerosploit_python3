@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xerosploit"
+version = "2.0.0"
+description = "A network security penetration testing framework"
+readme = "README.md"
+license = {text = "GPL-3.0"}
+authors = [
+    {name = "LionSec", email = "contact@lionsec.net"}
+]
+maintainers = [
+    {name = "LionSec", email = "contact@lionsec.net"}
+]
+keywords = ["security", "penetration-testing", "network", "hacking"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: POSIX :: Linux",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "tabulate>=0.8.0",
+    "terminaltables>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0",
+    "flake8>=3.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/LionSec/xerosploit"
+Repository = "https://github.com/LionSec/xerosploit.git"
+Documentation = "https://github.com/LionSec/xerosploit#readme"
+"Bug Tracker" = "https://github.com/LionSec/xerosploit/issues"
+
+[project.scripts]
+xerosploit = "xerosploit:main"
+
+[tool.setuptools]
+py-modules = ["xerosploit", "banner"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["tools/**/*", "README.md", "LICENSE"]
+
+[tool.black]
+line-length = 88
+target-version = ['py36', 'py37', 'py38', 'py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]

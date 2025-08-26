@@ -1,8 +1,9 @@
 
-[![Version](https://img.shields.io/badge/Xerosploit-Version_1.0-brightgreen.svg?maxAge=259200)]()
-[![PyPI](https://img.shields.io/badge/Python-2.7-blue.svg)]()
+[![Version](https://img.shields.io/badge/Xerosploit-Version_2.0-brightgreen.svg?maxAge=259200)]()
+[![PyPI](https://img.shields.io/badge/Python-3.6+-blue.svg)]()
 [![Build](https://img.shields.io/badge/Supported_OS-linux-orange.svg)]()
 [![AUR](https://img.shields.io/aur/license/yaourt.svg)]()
+[![pipx](https://img.shields.io/badge/install%20with-pipx-green.svg)]()
 
 Xerosploit
 =
@@ -26,13 +27,71 @@ Dependencies
 
 
 
-Instalation
+Installation
 =
+
+## Method 1: pipx Installation (Recommended)
+
+pipx installs Xerosploit in an isolated environment and makes it available globally.
+
+### Prerequisites
+- Python 3.6+
+- pipx (will be installed automatically if not present)
+
+### Quick Install
+```bash
+git clone https://github.com/LionSec/xerosploit
+cd xerosploit
+chmod +x install_pipx.sh
+./install_pipx.sh
+```
+
+### Manual pipx Installation
+```bash
+# Install system dependencies (requires sudo)
+sudo apt-get update
+sudo apt-get install -y nmap hping3 build-essential python3-pip ruby-dev git libpcap-dev libgmp3-dev
+
+# Install bettercap gem
+gem install bettercap
+
+# Install pipx if not available
+sudo apt-get install -y pipx
+# OR: python3 -m pip install --user pipx
+
+# Install xerosploit
+pipx install .
+
+# Run xerosploit
+xerosploit
+```
+
+### pipx Management
+```bash
+# Upgrade xerosploit
+pipx upgrade xerosploit
+
+# Uninstall xerosploit
+pipx uninstall xerosploit
+
+# List installed packages
+pipx list
+```
+
+## Method 2: Traditional Installation
 Dependencies will be automatically installed.
 
-    git clone https://github.com/LionSec/xerosploit
-    cd xerosploit && sudo python install.py
-    sudo xerosploit
+```bash
+git clone https://github.com/LionSec/xerosploit
+cd xerosploit && sudo python install.py
+sudo xerosploit
+```
+
+## Installation Notes
+- pipx method does not require root privileges for the Python package installation
+- Traditional method requires root privileges
+- Both methods require sudo for system dependencies
+- Make sure `~/.local/bin` is in your PATH when using pipx
 
 
 Tested on

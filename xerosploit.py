@@ -31,7 +31,7 @@ from time import sleep
 
 #Check if the script is running as root .
 if not os.geteuid() == 0:
-	sys.exit("""\033[1;91m\n[!] Xerosploit must be run as root. ¯\_(ツ)_/¯\n\033[1;m""")
+	sys.exit("""\033[1;91m\n[!] Xerosploit must be run as root. ¯\\_(ツ)_/¯\n\033[1;m""")
 
 # Exit message
 exit_msg = "\n[++] Shutting down ... Goodbye. ( ^_^)／\n"
@@ -68,7 +68,7 @@ def main():
 			print(xe_header())
 
 			print("""
-[+]═══════════[ Author : @LionSec1 \033[1;36m_-\|/-_\033[1;m Website: www.neodrix.com ]═══════════[+]
+[+]═══════════[ Author : @LionSec1 \033[1;36m_-\\|/-_\033[1;m Website: www.neodrix.com ]═══════════[+]
 
 					  [ Powered by Bettercap and Nmap ]""")
 
